@@ -79,7 +79,7 @@ class VectorStoreIndex(BaseIndex[IndexDict]):
             storage_context=storage_context,
             show_progress=show_progress,
             objects=objects,
-            callback_manager=callback_manager,
+            callback_manager=callback_manager or Settings.callback_manager,
             transformations=transformations,
             **kwargs,
         )
